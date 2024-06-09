@@ -1,0 +1,43 @@
+#Qual a porcentagem de mulheres matriculadas nos cursos de Sistemas de Informação por estados brasileiros de 2019 a 2022?
+
+PREFIX rdf: <https://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX ellas: <https://ellas.ufmt.br/Ontology/Ellas/> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX : <https://ellas.ufmt.br/Ontology/Ellas#>
+
+SELECT ?state_name 
+(sum(xsd:float(?enrolled_female2019))/(sum(xsd:float(?enrolled_female2019))+sum(xsd:float(?enrolled_male2019))) * 100 as ?enrolled_female2019_total)
+(sum(xsd:float(?enrolled_female2020))/(sum(xsd:float(?enrolled_female2020))+sum(xsd:float(?enrolled_male2020))) * 100 as ?enrolled_female2020_total)
+(sum(xsd:float(?enrolled_female2021))/(sum(xsd:float(?enrolled_female2021))+sum(xsd:float(?enrolled_male2021))) * 100 as ?enrolled_female2021_total)
+(sum(xsd:float(?enrolled_female2022))/(sum(xsd:float(?enrolled_female2022))+sum(xsd:float(?enrolled_male2022))) * 100 as ?enrolled_female2022_total)
+
+WHERE { 
+    ?course a ellas:Course.
+    ?course ellas:course_ISCED_label ?course_name.
+    ?course ellas:locatedInState ?state.
+    ?state rdfs:label ?state_name.
+    FILTER (CONTAINS(LCASE(?course_name), "sistemas de informacao"))
+    ?named_graph time:year ?year.
+    graph <https://ellas.ufmt.br/Ontology/Ellas/SecondaryData/INEP2019> {
+        ?course ellas:enrolled_female ?enrolled_female2019.
+        ?course ellas:enrolled_male ?enrolled_male2019.
+    }
+    graph <https://ellas.ufmt.br/Ontology/Ellas/SecondaryData/INEP2020> {	
+        ?course ellas:enrolled_female ?enrolled_female2020.
+        ?course ellas:enrolled_male ?enrolled_male2020.
+    }
+    graph <https://ellas.ufmt.br/Ontology/Ellas/SecondaryData/INEP2021> {	
+        ?course ellas:enrolled_female ?enrolled_female2021.
+        ?course ellas:enrolled_male ?enrolled_male2021.
+    }
+    graph <https://ellas.ufmt.br/Ontology/Ellas/SecondaryData/INEP2022> {	
+        ?course ellas:enrolled_female ?enrolled_female2022.
+        ?course ellas:enrolled_male ?enrolled_male2022.
+    }
+}
+GROUP BY
+    ?state_name
+ORDER BY
+    desc(?enrolled_female2022_total)

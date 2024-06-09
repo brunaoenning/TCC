@@ -1,0 +1,25 @@
+#Evolução do Número de Concluintes por Gênero entre 2009 e 2022 no Brasil por grandes áreas em STEM
+PREFIX rdf: <https://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX ellas: <https://ellas.ufmt.br/Ontology/Ellas/> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?year ?general_name (sum(xsd:float(?completed_female)) as ?completed_female_total) 
+(sum(xsd:float(?completed_male)) as ?completed_male_total) 
+WHERE { 
+    ?course a ellas:Course.
+    ?named_graph time:year ?year.
+    ?course ellas:hasDetailedArea ?detailed.
+    ?detailed ellas:hasSpecificArea ?specific.
+    ?specific ellas:hasGeneralArea ?general.
+    ?general rdfs:label ?general_name.
+    GRAPH ?named_graph { 
+        ?course ellas:completed_female ?completed_female.
+        ?course ellas:completed_male ?completed_male.
+     } 
+}
+GROUP BY
+    ?year ?general_name
+ORDER BY
+    asc(?year)

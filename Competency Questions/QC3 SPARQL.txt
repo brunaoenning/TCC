@@ -1,0 +1,32 @@
+#Quantas mulheres estavam matriculadas em Institutos Federais de Educação, Ciência e Tecnologia na área da computação em Curitiba Paraná por ano?
+
+PREFIX rdf: <https://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX ellas: <https://ellas.ufmt.br/Ontology/Ellas/> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX : <https://ellas.ufmt.br/Ontology/Ellas#>
+
+SELECT ?year
+(sum(xsd:float(?enrolled_female)) as ?enrolled_female_total)
+WHERE { 
+    ?course a ellas:Course.
+    ?course ellas:hasDetailedArea ?detailed.
+    ?detailed ellas:hasSpecificArea ?specific.
+    ?specific ellas:hasGeneralArea ?general.
+    ?general rdfs:label ?general_name.
+    FILTER (CONTAINS(LCASE(?general_name), "tecnologia"))
+    ?named_graph time:year ?year.
+    ?course ellas:offeredBy ?hei.
+    ?hei a ellas:FederalInstitute.
+    ?hei ellas:hasLocation ?city.
+    ?city a ellas:City.
+    ?city rdfs:label 'Curitiba'.
+    GRAPH ?named_graph { 
+        ?course ellas:enrolled_female ?enrolled_female.
+     } 
+}
+GROUP BY
+    ?year
+ORDER BY
+    asc(?year)

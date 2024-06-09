@@ -1,0 +1,1064 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://ellas.ufmt.br/Ontology/Ellas#"
+     xml:base="https://ellas.ufmt.br/Ontology/Ellas"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://www.w3.org/2006/time#">
+    <owl:Ontology rdf:about="https://ellas.ufmt.br/Ontology/Ellas"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#fromSource -->
+
+    <owl:ObjectProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#fromSource">
+        <rdfs:domain rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#SecondaryData"/>
+        <rdfs:range rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Source"/>
+        <rdfs:comment xml:lang="pt">Fonte onde os dados secundários foram retirados.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Source from which the secondary data was taken.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#hasAdministrativeCategory -->
+
+    <owl:ObjectProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#hasAdministrativeCategory">
+        <rdfs:domain rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#HigherEducationInstitution"/>
+        <rdfs:range rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#AdministrativeCategory"/>
+        <rdfs:comment xml:lang="en">Administrative category of the higher education institution.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Categoria administrativa da instituição de ensino superior.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#hasArea -->
+
+    <owl:ObjectProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#hasArea">
+        <rdfs:range rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Area"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#hasDetailedArea -->
+
+    <owl:ObjectProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#hasDetailedArea">
+        <rdfs:domain rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Course"/>
+        <rdfs:range rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#DetailedArea"/>
+        <rdfs:comment xml:lang="en">At the third structural level of Cine Brasil, the course is grouped by Detailed Area according to the similarity of the thematic content.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">No terceiro nível estrutural da Cine Brasil, o curso é agrupado por Área Detalhada de acordo com a similaridade do conteúdo temático.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#hasFundingOrganization -->
+
+    <owl:ObjectProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#hasFundingOrganization"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#hasGeneralArea -->
+
+    <owl:ObjectProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#hasGeneralArea">
+        <rdfs:domain rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#SpecificArea"/>
+        <rdfs:range rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#GeneralArea"/>
+        <rdfs:comment xml:lang="en">At the first structural level of Cine Brasil, the course is grouped by General Area according to the similarity of the thematic content.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">No primeiro nível estrutural da Cine Brasil, o curso é agrupado por Área Geral de acordo com a similaridade do conteúdo temático.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#hasLocation">
+        <rdfs:range rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Location"/>
+        <rdfs:comment xml:lang="pt">Localização em que a coisa está localizada.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The location of the thing.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#hasSpecificArea -->
+
+    <owl:ObjectProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#hasSpecificArea">
+        <rdfs:domain rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#DetailedArea"/>
+        <rdfs:range rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#SpecificArea"/>
+        <rdfs:comment xml:lang="en">At the second structural level of Cine Brasil, the course is grouped by Specific Area according to the similarity of the thematic content.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">No segundo nível estrutural da Cine Brasil, o curso é agrupado por Área Específica de acordo com a similaridade do conteúdo temático.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#hasTargetAudience -->
+
+    <owl:ObjectProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#hasTargetAudience"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#locatedInCity -->
+
+    <owl:ObjectProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#locatedInCity">
+        <rdfs:range rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#City"/>
+        <rdfs:comment xml:lang="pt">Cidade em que a coisa está localizada.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#locatedInCountry -->
+
+    <owl:ObjectProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#locatedInCountry">
+        <rdfs:range rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Country"/>
+        <rdfs:comment xml:lang="pt">País em que a coisa está localizada.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#locatedInNeighborhood -->
+
+    <owl:ObjectProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#locatedInNeighborhood">
+        <rdfs:range rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Neighborhood"/>
+        <rdfs:comment xml:lang="pt">Bairro em que a coisa está localizada.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#locatedInRegion -->
+
+    <owl:ObjectProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#locatedInRegion">
+        <rdfs:range rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Region"/>
+        <rdfs:comment xml:lang="pt">Região em que a coisa está localizada.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#locatedInState -->
+
+    <owl:ObjectProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#locatedInState">
+        <rdfs:range rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#State"/>
+        <rdfs:comment xml:lang="pt">Estado em que a coisa está localizada.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#offeredBy -->
+
+    <owl:ObjectProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#offeredBy">
+        <owl:inverseOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#offersCourses"/>
+        <rdfs:domain rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Course"/>
+        <rdfs:range rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#HigherEducationInstitution"/>
+        <rdfs:comment xml:lang="en">Courses offered by the educational institution.</rdfs:comment>
+        <rdfs:comment>Cursos oferecidos pela Instituição de Ensino.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#offersCourses -->
+
+    <owl:ObjectProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#offersCourses">
+        <rdfs:domain rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#HigherEducationInstitution"/>
+        <rdfs:range rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Course"/>
+        <rdfs:comment xml:lang="en">Educational Institution offers Courses.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Instituição de Ensino oferece Cursos.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#HEI_acronym -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#HEI_acronym">
+        <rdfs:domain rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#HigherEducationInstitution"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="pt">Sigla da Instituição de Ensino.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The acronym of the Educational Institution.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#administrative_category_description -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#administrative_category_description">
+        <rdfs:domain rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#AdministrativeCategory"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="pt">Informa a descrição de uma categoria administrativa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Informs the description of an administrative category.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#article_author -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#article_author"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#article_research_objectives -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#article_research_objectives"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#article_research_problem -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#article_research_problem"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#completed_female -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#completed_female">
+        <rdfs:domain rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Number of female graduates.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Quantidade de concluintes do sexo feminino.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#completed_male -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#completed_male">
+        <rdfs:domain rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Number of male graduates.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Quantidade de concluintes do sexo masculino.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#course_ISCED_label -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#course_ISCED_label">
+        <rdfs:domain rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Name of the course, as adapted from the International Standard Classification of Education ISCED/Unesco.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Nome do curso, conforme adaptação da Classificação Internacional Normalizada da Educação Cine/Unesco.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#enrolled_female -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#enrolled_female">
+        <rdfs:domain rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Number of female enrolments on a course.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Quantidade de matrículas do sexo feminino pertencentes a um curso.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#enrolled_male -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#enrolled_male">
+        <rdfs:domain rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Number of male enrolments on a course.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Quantidade de matrículas do sexo masculino pertencentes a um curso.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#factors_context_type -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#factors_context_type"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#factors_contextual_factor_detail -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#factors_contextual_factor_detail"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#factors_impact -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#factors_impact"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#factors_impact_description -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#factors_impact_description"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#factors_impact_type -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#factors_impact_type"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#factors_investigation_context_type -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#factors_investigation_context_type"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#finish_date -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#finish_date"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#fresher_female -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#fresher_female">
+        <rdfs:domain rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Number of female fresher students.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Quantidade de ingressantes do sexo feminino.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#fresher_male -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#fresher_male">
+        <rdfs:domain rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Number of male fresher students.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Quantidade de ingressantes do sexo masculino.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#fundingOrganization_name -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#fundingOrganization_name"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#fundingOrganization_sector -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#fundingOrganization_sector"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#initiative_community_name -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#initiative_community_name"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#initiative_coordinator_gender -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#initiative_coordinator_gender"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#initiative_coordinator_type -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#initiative_coordinator_type"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#initiative_data_source -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#initiative_data_source"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#initiative_format -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#initiative_format"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#initiative_impact -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#initiative_impact"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#initiative_name -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#initiative_name"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#initiative_number_of_participants -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#initiative_number_of_participants"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#initiative_objective -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#initiative_objective"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#initiative_other_links -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#initiative_other_links"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#initiative_reach -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#initiative_reach"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#initiative_socialmedia_indicators -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#initiative_socialmedia_indicators"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#initiative_socialmedia_link -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#initiative_socialmedia_link"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#initiative_status -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#initiative_status"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#initiative_website -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#initiative_website"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#is_course_in_person -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#is_course_in_person">
+        <rdfs:domain rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <owl:propertyDisjointWith rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#is_course_online"/>
+        <rdfs:comment xml:lang="pt">Informa se o curso é presencial.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Informs if the course is in person.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#is_course_online -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#is_course_online">
+        <rdfs:domain rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="pt">Informa se o curso é remoto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Informs if the course is online.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#is_free_of_fees -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#is_free_of_fees">
+        <rdfs:domain rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="pt">Informa se o curso é livre de taxas.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Informs if the course is free of fees.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#policy_category -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#policy_category"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#policy_description -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#policy_description"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#policy_goals -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#policy_goals"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#policy_impact -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#policy_impact"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#policy_impact_description -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#policy_impact_description"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#policy_status -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#policy_status"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#policy_stem_subarea -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#policy_stem_subarea"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#policy_type -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#policy_type"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#registered -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#registered">
+        <rdfs:domain rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="pt">Quantidade total de inscritos que querem entrar no Curso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Total number of registrants who want to enter the Course.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#social_support -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#social_support">
+        <rdfs:domain rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Number of students receiving some kind of social support.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Quantidade de alunos que recebem algum tipo de apoio social.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#source_description -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#source_description">
+        <rdfs:domain rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Source"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="pt">Informa a descrição da fonte de dados secundários da ontologia.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Provides a description of the ontology&apos;s secondary data source.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#source_link -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#source_link">
+        <rdfs:domain rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Source"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="pt">Informa o link da fonte dos dados secundários da ontologia.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Provides the link to the source of the ontology&apos;s secondary data.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#start_date -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#start_date"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#state_acronym -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#state_acronym">
+        <rdfs:domain rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#State"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Acronym of the Federation Unit of the administrative center or rectory of the Educational Institution.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Sigla da Unidade da Federação da sede administrativa ou reitoria da Instituição de Ensino.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#vacancy -->
+
+    <owl:DatatypeProperty rdf:about="https://ellas.ufmt.br/Ontology/Ellas#vacancy">
+        <rdfs:domain rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="pt">Quantidade total de vagas oferecidas no curso.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Total number of course vacancies offered.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#AdministrativeCategory -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#AdministrativeCategory">
+        <rdfs:comment xml:lang="pt">Refere-se à gestão administrativa da instituição de ensino superior, podendo ser pública e privada.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Refers to the administrative management of the higher education institution, which can be public or private.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#Area -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#Area">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#BachelorCourse -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#BachelorCourse">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Course"/>
+        <owl:disjointWith rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#BachelorLicentiateCourse"/>
+        <rdfs:comment xml:lang="en">A higher education course that provides a bachelor&apos;s degree at the end of studies in a specific area of knowledge.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Um curso de ensino superior que concede um diploma de bacharelado após a conclusão de estudos em uma área específica de conhecimento.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#BachelorLicentiateCourse -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#BachelorLicentiateCourse">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Course"/>
+        <rdfs:comment xml:lang="en">A higher education course that provides a bachelor&apos;s and licentiate degree at the end of studies in a specific area of knowledge.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Um curso de ensino superior que concede um diploma de bacharelado e licenciatura após a conclusão de estudos em uma área específica de conhecimento.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#City -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#City">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Location"/>
+        <rdfs:comment xml:lang="en">A concentrated human conglomeration in a geographically delimited region, consisting of residences and economic, cultural and social activities.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Um conglomerado humano concentrado região geograficamente delimitada, composto por residências e atividades econômicas, culturais e sociais.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#College -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#College">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#HigherEducationInstitution"/>
+        <rdfs:comment xml:lang="en">An institution of higher education that operates in a few areas of knowledge, in which it specializes.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Uma instituição de educação superior que atua em um número reduzido de áreas do saber, no qual são especializadas.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#Community -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#Community">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Initiative"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#Conference -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#Conference">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Initiative"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#ContextualFactor -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#ContextualFactor">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Factor"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#Country -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#Country">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Location"/>
+        <rdfs:comment xml:lang="en">A geographically delimited territory inhabited by a community with its own history.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Um território geograficamente delimitado e habitado por uma coletividade com história própria.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#Course -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#Course">
+        <rdfs:comment xml:lang="en">An organized set of classes or educational activities on a specific subject, usually offered at an educational institution.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Um conjunto organizado de aulas ou atividades educacionais sobre um assunto específico, geralmente oferecido em uma instituição de ensino.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#DetailedArea -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#DetailedArea">
+        <rdfs:comment xml:lang="en">Name of the detailed area, as adapted from the International Standard Classification of Education ISCED/Unesco.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Nome da área detalhada, conforme adaptação da Classificação Internacional Normalizada da Educação Cine/Unesco.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#Factor -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#Factor"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#FederalCenter -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#FederalCenter">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#HigherEducationInstitution"/>
+        <rdfs:comment xml:lang="pt">Centros federais de educação tecnológica (CEFET) são instituições de ensino superior pluricurriculares, especializados na oferta de educação tecnológica nos diferentes níveis e modalidades de ensino, caracterizando-se pela atuação prioritária na área tecnológica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Federal Technological Education Centres (CEFET) are multi-curricular higher education institutions, specialized in offering technological education at different levels and in different teaching modalities, characterized by the priority of working in the technological area.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#FederalInstitute -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#FederalInstitute">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#HigherEducationInstitution"/>
+        <rdfs:comment xml:lang="en">A federal institute of education, science and technology is a multi-campus, multi-curricular institution of higher, basic and professional education, specialized in offering professional and technological education in the different teaching modalities, based on the combination of technical and technological knowledge with its pedagogical practices.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Instituto federal de educação, ciência e tecnologia é uma instituição de educação superior, básica e profissional, pluricurriculares e multicampi, especializada na oferta de educação profissional e tecnológica nas diferentes modalidades de ensino, com base na conjugação de conhecimentos técnicos e tecnológicos às suas práticas pedagógicas.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#Funding_Organization -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#Funding_Organization">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#GeneralArea -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#GeneralArea">
+        <rdfs:comment xml:lang="en">Name of the general area, as adapted from the International Standard Classification of Education ISCED/Unesco.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Nome da área geral, conforme adaptação da Classificação Internacional Normalizada da Educação Cine/Unesco.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#HigherEducationInstitution -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#HigherEducationInstitution">
+        <rdfs:comment xml:lang="en">An organization dedicated to education beyond secondary level, including universities, colleges and technical institutes.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Uma organização dedicada à educação além do nível secundário, incluindo universidades, faculdades e institutos técnicos.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#Initiative -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#Initiative"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#InitiativeProgram -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#InitiativeProgram">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Initiative"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#LicentiateCourse -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#LicentiateCourse">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Course"/>
+        <rdfs:comment xml:lang="en">A higher education course focused on teacher training, providing a licentiate degree upon completion of studies in a specific area of knowledge.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Um curso de ensino superior focado na formação de professores, concedendo um diploma de licenciatura após a conclusão de estudos em uma área específica de conhecimento.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#Location -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#Location">
+        <rdfs:comment xml:lang="pt">Refere-se a algo situado no espaço geográfico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Refers to something located in geographical space.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#Neighborhood -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#Neighborhood">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Location"/>
+        <rdfs:comment xml:lang="en">A geographical subdivision of a city, usually characterized by a concentration of residences and commercial premises.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Uma subdivisão geográfica de uma cidade, geralmente caracterizada por uma concentração de residências e instalações comerciais.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#Organization -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#Organization"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#Policy -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#Policy"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#PolicyProgram -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#PolicyProgram">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Policy"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#Practice -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#Practice">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Policy"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#Private -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#Private">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#AdministrativeCategory"/>
+        <owl:disjointWith rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Public"/>
+        <rdfs:comment xml:lang="pt">Representa uma gestão administrativa da instituição de ensino superior quando gerida pelo ente privado.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Represents an administrative management of the higher education institution when managed by the private entity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#Process -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#Process">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Policy"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#Project -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#Project">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Initiative"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#Public -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#Public">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#AdministrativeCategory"/>
+        <rdfs:comment xml:lang="pt">Representa uma gestão administrativa da instituição de ensino superior quando gerida pelo ente público.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Represents an administrative management of the higher education institution when managed by the public entity.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#Region -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#Region">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Location"/>
+        <rdfs:comment xml:lang="en">A geographically delimited area that shares common physical, cultural, economic or administrative characteristics.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Uma área geograficamente delimitada que compartilha características físicas, culturais, econômicas ou administrativas comuns.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#SecondaryData -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#SecondaryData">
+        <rdfs:comment xml:lang="pt">Relaciona uma Fonte aos dados fornecidos por ela.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relates a Source to the data it provides.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#Source -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#Source">
+        <rdfs:comment xml:lang="pt">Fonte da qual os dados secundários foram obtidos.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Source from which the secondary data was obtained.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#SpecificArea -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#SpecificArea">
+        <rdfs:comment xml:lang="en">Name of the specific area, as adapted from the International Standard Classification of Education ISCED/Unesco.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Nome da área específica, conforme adaptação da Classificação Internacional Normalizada da Educação Cine/Unesco.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#State -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#State">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Location"/>
+        <rdfs:comment xml:lang="en">A politically and territorially organized entity, with its own government, which exercises authority over a population within defined borders.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Uma entidade política e territorialmente organizada, com um governo próprio, que exerce autoridade sobre uma população dentro de fronteiras definidas.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#TargetAudienceAge -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#TargetAudienceAge">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Target_Audience"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#TargetAudienceEducationalLevel -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#TargetAudienceEducationalLevel">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Target_Audience"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#TargetAudienceGender -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#TargetAudienceGender">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Target_Audience"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#TargetAudienceRace -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#TargetAudienceRace">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Target_Audience"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#TargetAudienceStakeholders -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#TargetAudienceStakeholders">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Target_Audience"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#TargetAudienceVulnerableGroups -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#TargetAudienceVulnerableGroups">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Target_Audience"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#Target_Audience -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#Target_Audience"/>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#TechnologicalCourse -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#TechnologicalCourse">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Course"/>
+        <rdfs:comment xml:lang="en">A short higher education course focused on specific technical and practical skills to prepare for the workplace.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Um curso de ensino superior de curta duração focado em habilidades técnicas e práticas específicas para preparar ao mercado de trabalho.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#Training -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#Training">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#Initiative"/>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#University -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#University">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#HigherEducationInstitution"/>
+        <rdfs:comment xml:lang="en">An institution of higher education that must offer teaching, research and extension activities in various areas of knowledge.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Uma instituição de educação superior que deve oferecer, obrigatoriamente, atividades de ensino, de pesquisa e de extensão em várias áreas do saber.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://ellas.ufmt.br/Ontology/Ellas#UniversityCenter -->
+
+    <owl:Class rdf:about="https://ellas.ufmt.br/Ontology/Ellas#UniversityCenter">
+        <rdfs:subClassOf rdf:resource="https://ellas.ufmt.br/Ontology/Ellas#HigherEducationInstitution"/>
+        <rdfs:comment xml:lang="en">A multi-curricular higher education institution, covering one or more areas of knowledge, which is characterized by the excellence of the teaching offered, proven by the qualifications of its professors and the academic working conditions offered to the school community.</rdfs:comment>
+        <rdfs:comment xml:lang="pt">Uma instituição de educação superior pluricurriculares, abrangendo uma ou mais áreas do conhecimento, que se caracteriza pela excelência do ensino oferecido, comprovada pela qualificação do seu corpo docente e pelas condições de trabalho acadêmico, oferecidas à comunidade escolar.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://ellas.ufmt.br/Ontology/Ellas#BachelorCourse"/>
+            <rdf:Description rdf:about="https://ellas.ufmt.br/Ontology/Ellas#BachelorLicentiateCourse"/>
+            <rdf:Description rdf:about="https://ellas.ufmt.br/Ontology/Ellas#LicentiateCourse"/>
+            <rdf:Description rdf:about="https://ellas.ufmt.br/Ontology/Ellas#TechnologicalCourse"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://ellas.ufmt.br/Ontology/Ellas#BachelorCourse"/>
+            <rdf:Description rdf:about="https://ellas.ufmt.br/Ontology/Ellas#LicentiateCourse"/>
+            <rdf:Description rdf:about="https://ellas.ufmt.br/Ontology/Ellas#TechnologicalCourse"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://ellas.ufmt.br/Ontology/Ellas#College"/>
+            <rdf:Description rdf:about="https://ellas.ufmt.br/Ontology/Ellas#FederalCenter"/>
+            <rdf:Description rdf:about="https://ellas.ufmt.br/Ontology/Ellas#FederalInstitute"/>
+            <rdf:Description rdf:about="https://ellas.ufmt.br/Ontology/Ellas#University"/>
+            <rdf:Description rdf:about="https://ellas.ufmt.br/Ontology/Ellas#UniversityCenter"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

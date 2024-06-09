@@ -1,0 +1,30 @@
+#Quantas mulheres concluíram bacharelados em cursos de engenharia em universidades públicas no Sul do Brasil em 2022?
+
+PREFIX rdf: <https://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX ellas: <https://ellas.ufmt.br/Ontology/Ellas/> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?named_graph (sum(xsd:float(?completed_female)) as ?completed_female_total)
+WHERE { 
+    ?course a ellas:BachelorCourse.
+    ?course ellas:hasDetailedArea ?detailed.
+    ?detailed ellas:hasSpecificArea ?specific.
+    ?specific rdfs:label ?specific_name.
+    FILTER (CONTAINS(LCASE(?specific_name), "engenharia"))
+    ?named_graph time:year '2022'.
+    ?course ellas:offeredBy ?hei.
+    ?hei a ellas:University.
+    ?hei ellas:hasAdministrativeCategory ?adm.
+    ?adm a ellas:Public.
+    ?hei ellas:hasLocation ?location.
+    ?location a ellas:Region.
+    ?location rdfs:label 'Sul'.
+    GRAPH ?named_graph { ?course ellas:completed_female ?completed_female.
+     } 
+}
+GROUP BY
+    ?named_graph
+ORDER BY
+    asc(?named_graph)

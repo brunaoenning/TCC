@@ -1,0 +1,30 @@
+#Evolução da porcentagem de Mulheres Matrículadas e Concluintes entre 2009 e 2022 em Tecnologia
+PREFIX rdf: <https://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX ellas: <https://ellas.ufmt.br/Ontology/Ellas/> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?year ?general_name 
+(sum(xsd:float(?enrolled_female))/(sum(xsd:float(?enrolled_male)) + sum(xsd:float(?enrolled_female)))*100 as ?percentual_mulheres_matriculadas)
+(sum(xsd:float(?completed_female))/(sum(xsd:float(?completed_male)) + sum(xsd:float(?completed_female)))*100 as ?percentual_mulheres_concluintes)
+WHERE { 
+    ?course a ellas:Course.
+    ?named_graph time:year ?year.
+    ?course ellas:hasDetailedArea ?detailed.
+    ?detailed ellas:hasSpecificArea ?specific.
+    ?specific ellas:hasGeneralArea ?general.
+    ?general rdfs:label ?general_name.
+    FILTER (CONTAINS(LCASE(?general_name), "tecnologia"))
+    GRAPH ?named_graph { 
+        ?course ellas:enrolled_female ?enrolled_female.
+        ?course ellas:enrolled_male ?enrolled_male.
+        
+        ?course ellas:completed_female ?completed_female.
+        ?course ellas:completed_male ?completed_male.
+     } 
+}
+GROUP BY
+    ?year ?general_name
+ORDER BY
+    asc(?year)

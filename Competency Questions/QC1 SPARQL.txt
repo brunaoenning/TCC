@@ -1,0 +1,22 @@
+#QC1 Qual a porcentagem de mulheres que ingressaram em cursos de STEM no Brasil por ano?
+PREFIX rdf: <https://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX ellas: <https://ellas.ufmt.br/Ontology/Ellas/> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?year (sum(xsd:float(?fresher_female)) as ?fresher_female_total) 
+(sum(xsd:float(?fresher_male)) as ?fresher_male_total) 
+(?fresher_female_total/(?fresher_male_total + ?fresher_female_total)*100 as ?percentual_mulheres) # Porcentagem de mulheres 
+((?fresher_female_total*10)/(?fresher_male_total + ?fresher_female_total) as ?qtde_mulheres) #Quantidade de mulheres a cada 10 pessoas que ingressaram em cursos de STEM
+WHERE { 
+    ?course a ellas:Course.
+    ?named_graph time:year ?year.
+    GRAPH ?named_graph { ?course ellas:fresher_female ?fresher_female.
+        ?course ellas:fresher_male ?fresher_male.
+     } 
+}
+GROUP BY
+    ?year
+ORDER BY
+    asc(?year)

@@ -1,0 +1,1641 @@
+{
+  "baseIRI": "http://example.com/base/",
+  "namespaces": {
+    "ellas": "https://ellas.ufmt.br/Ontology/Ellas/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "time": "http://www.w3.org/2006/time#",
+    "wgs": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "subjectMappings": [
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "rdfs",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "label"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "NO_CURSO",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "enrolled_female"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "QT_MAT_FEM",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "enrolled_male"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "QT_MAT_MASC",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "fresher_female"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "QT_ING_FEM",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "fresher_male"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "QT_ING_MASC",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "completed_female"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "QT_CONC_FEM",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "completed_male"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "QT_CONC_MASC",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "vacancy"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "QT_VG_TOTAL",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "registered"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "QT_INSCRITO_TOTAL",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasDetailedArea"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "ellas:DetailedArea/",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "CO_CINE_AREA_DETALHADA",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "is_free_of_fees"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "IN_GRATUITO",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "datatype_literal",
+                "datatype": {
+                  "transformation": {
+                    "expression": "xsd",
+                    "language": "prefix"
+                  },
+                  "valueSource": {
+                    "source": "constant",
+                    "constant": "boolean"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "is_course_online"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "if(cells[\"TP_MODALIDADE_ENSINO\"].value == 'Remoto', true, false)",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "type": "datatype_literal",
+                "datatype": {
+                  "transformation": {
+                    "expression": "xsd",
+                    "language": "prefix"
+                  },
+                  "valueSource": {
+                    "source": "constant",
+                    "constant": "boolean"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "social_support"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "QT_APOIO_SOCIAL",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "is_course_in_person"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "if(cells[\"TP_MODALIDADE_ENSINO\"].value == 'Presencial', true, false)\t",
+                "language": "grel"
+              },
+              "valueSource": {
+                "source": "row_index"
+              },
+              "valueType": {
+                "type": "datatype_literal",
+                "datatype": {
+                  "transformation": {
+                    "expression": "xsd",
+                    "language": "prefix"
+                  },
+                  "valueSource": {
+                    "source": "constant",
+                    "constant": "boolean"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "course_ISCED_label"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "NO_CINE_ROTULO",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "offeredBy"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "ellas:HigherEducationInstitution/",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "CO_IES",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "locatedInCity"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "ellas:Location/",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "NO_MUNICIPIO_CURSO",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "locatedInState"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "ellas:Location/",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "NO_UF_CURSO",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "ellas:Course/",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "CO_CURSO_ESPECIFICO",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "ellas",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "columnName": "TP_GRAU_ACADEMICO",
+            "source": "column"
+          }
+        }
+      ]
+    },
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "rdfs",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "label"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "NO_IES",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "offersCourses"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "ellas:Course/",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "CO_CURSO_ESPECIFICO",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "HEI_acronym"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "SG_IES",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasAdministrativeCategory"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "ellas:AdministrativeCategory/",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "TP_CATEGORIA_ADMINISTRATIVA",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasLocation"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "ellas:Location/",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "NO_MUNICIPIO_IES",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasLocation"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "ellas:Location/",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "NO_UF_IES",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasLocation"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "ellas:Location/",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "NO_REGIAO_IES",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasLocation"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "ellas:Location/",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "NO_BAIRRO_IES",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasLocation"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "ellas:Location/",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "source": "constant",
+                "constant": "Brasil"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "ellas:HigherEducationInstitution/",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "CO_IES",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "ellas",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "columnName": "TP_ORGANIZACAO_ACADEMICA",
+            "source": "column"
+          }
+        }
+      ]
+    },
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "rdfs",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "label"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "NO_CINE_AREA_DETALHADA",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasSpecificArea"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "ellas:SpecificArea/",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "CO_CINE_AREA_ESPECIFICA",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "ellas:DetailedArea/",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "CO_CINE_AREA_DETALHADA",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "ellas",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "DeitaledArea"
+          }
+        }
+      ]
+    },
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "rdfs",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "label"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "NO_CINE_AREA_ESPECIFICA",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "hasGeneralArea"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "ellas:GeneralArea/",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "CO_CINE_AREA_GERAL",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "ellas:SpecificArea/",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "CO_CINE_AREA_ESPECIFICA",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "ellas",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "SpecificArea"
+          }
+        }
+      ]
+    },
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "rdfs",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "label"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "NO_CINE_AREA_GERAL",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "ellas:GeneralArea/",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "CO_CINE_AREA_GERAL",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "ellas",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "GeneralArea"
+          }
+        }
+      ]
+    },
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "time",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "year"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "NU_ANO_CENSO",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "fromSource"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "ellas:Source/",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "columnName": "FONTE",
+                "source": "column"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "ellas:SecondaryData/",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "SECONDARY_DATA_ID",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "ellas",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "SecondaryData"
+          }
+        }
+      ]
+    },
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "rdfs",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "label"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "FONTE",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "locatedInCountry"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "ellas:Location/",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "source": "constant",
+                "constant": "Brasil"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "ellas:Source/",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "FONTE",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "ellas",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "Source"
+          }
+        }
+      ]
+    },
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "rdfs",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "label"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "source": "constant",
+                "constant": "Brasil"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "ellas:Location/",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "source": "constant",
+          "constant": "Brasil"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "ellas",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "Country"
+          }
+        }
+      ]
+    },
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "ellas",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "state_acronym"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "SG_UF_IES",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        },
+        {
+          "property": {
+            "transformation": {
+              "expression": "rdfs",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "label"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "NO_UF_IES",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "ellas:Location/",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "NO_UF_IES",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "ellas",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "State"
+          }
+        }
+      ]
+    },
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "rdfs",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "label"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "NO_REGIAO_IES",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "ellas:Location/",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "NO_REGIAO_IES",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "ellas",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "Region"
+          }
+        }
+      ]
+    },
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "rdfs",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "label"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "NO_BAIRRO_IES",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "ellas:Location/",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "NO_BAIRRO_IES",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "ellas",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "Neighborhood"
+          }
+        }
+      ]
+    },
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "rdfs",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "label"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "NO_MUNICIPIO_IES",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "ellas:Location/",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "NO_MUNICIPIO_IES",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "ellas",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "source": "constant",
+            "constant": "City"
+          }
+        }
+      ]
+    },
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "rdfs",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "label"
+            }
+          },
+          "values": [
+            {
+              "valueSource": {
+                "columnName": "TP_CATEGORIA_ADMINISTRATIVA",
+                "source": "column"
+              },
+              "valueType": {
+                "type": "literal"
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "ellas:AdministrativeCategory/",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "TP_CATEGORIA_ADMINISTRATIVA",
+          "source": "column"
+        }
+      },
+      "typeMappings": [
+        {
+          "transformation": {
+            "expression": "ellas",
+            "language": "prefix"
+          },
+          "valueSource": {
+            "columnName": "TP_REDE",
+            "source": "column"
+          }
+        }
+      ]
+    },
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "rdfs",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "subClassOf"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "ellas",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "source": "constant",
+                "constant": "Course"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "ellas",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "TP_GRAU_ACADEMICO",
+          "source": "column"
+        }
+      },
+      "typeMappings": []
+    },
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "rdfs",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "subClassOf"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "ellas",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "source": "constant",
+                "constant": "HigherEducationInstitution"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "ellas",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "TP_ORGANIZACAO_ACADEMICA",
+          "source": "column"
+        }
+      },
+      "typeMappings": []
+    },
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "rdfs",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "subClassOf"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "ellas",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "source": "constant",
+                "constant": "AdministrativeCategory"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "ellas",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "columnName": "TP_REDE",
+          "source": "column"
+        }
+      },
+      "typeMappings": []
+    },
+    {
+      "propertyMappings": [
+        {
+          "property": {
+            "transformation": {
+              "expression": "rdfs",
+              "language": "prefix"
+            },
+            "valueSource": {
+              "source": "constant",
+              "constant": "subClassOf"
+            }
+          },
+          "values": [
+            {
+              "transformation": {
+                "expression": "ellas",
+                "language": "prefix"
+              },
+              "valueSource": {
+                "source": "constant",
+                "constant": "Location"
+              },
+              "valueType": {
+                "propertyMappings": [],
+                "type": "iri",
+                "typeMappings": []
+              }
+            }
+          ]
+        }
+      ],
+      "subject": {
+        "transformation": {
+          "expression": "ellas",
+          "language": "prefix"
+        },
+        "valueSource": {
+          "source": "constant",
+          "constant": "City"
+        }
+      },
+      "typeMappings": []
+    }
+  ]
+}
